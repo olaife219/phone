@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        #content1 {
+            border: 1px black solid;
+            width: 300px;
+            height: 550px;
+            position: relative;
+            background-image: url(./onemizer-kaws-tribute-2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            margin: 40px auto;
+            padding: 20px 10px;
+        }
+
+        .top-notch {
+            border-radius: 0px 0px 300px 300px;
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 30px;
+            color: darkblue;
+        }
+
+        .open {
+            position: absolute;
+            bottom: 20px;
+            left: 10%;
+            transform: translateX(-50%);
+            font-size: 30px;
+            width: 40px;
+            border-radius: 20px;
+            background-color: aliceblue;
+            border: none;
+        }
+
+        .camera {
+            position: absolute;
+            bottom: 20px;
+            left: 90%;
+            transform: translateX(-50%);
+            border-radius: 20px;
+            padding: 5px;
+            border: none;
+            background-color: aliceblue;
+        }
+
+        .container {
+            width: 300px;
+            height: 550px;
+            position: relative;
+            background-image: url(./onemizer-kaws-tribute-2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            margin: 40px auto;
+            padding: 20px 10px;
+            text-align: center;
+            border: 1px black solid;
+        }
+
+        #prevQue {
+            margin-top: 30px;
+            float: left;
+            width: 150px;
+            height: 60px;
+            background-color: red;
+        }
+
+        .container input {
+            float: left;
+            margin-left: 380px;
+        }
+
+        .container span {
+            float: left;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        #nextQue {
+            margin-top: 30px;
+            float: right;
+            width: 150px;
+            height: 60px;
+            background-color: green;
+        }
+
+        #hiddenBtn {
+            margin-top: 30px;
+            float: right;
+            width: 150px;
+            height: 60px;
+            background-color: green;
+        }
+
+        #watch {
+            font-weight: 800;
+            color: blueviolet;
+            float: left;
+            margin-top: 80px;
+        }
+
+        .setting {
+            width: 50px;
+            height: 50px;
+            font-size: 34px;
+            background-color: lightgray;
+            color: white;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+
+        .calender {
+            width: 50px;
+            height: 50px;
+            font-size: 34px;
+            background-color: lightgray;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+
+        .camera2 {
+            position: absolute;
+            bottom: 20px;
+            /* Adjust the value as needed */
+            left: 80%;
+            transform: translateX(-50%);
+            border-radius: 10px;
+            background-color: white;
+            font-size: 34px;
+            width: 50px;
+            height: 50px;
+        }
+
+        .phone {
+            position: absolute;
+            bottom: 20px;
+            /* Adjust the value as needed */
+            left: 20%;
+            transform: translateX(-50%);
+            border-radius: 10px;
+            background-color: yellowgreen;
+            color: white;
+            font-size: 34px;
+            width: 50px;
+            height: 50px;
+        }
+
+        .phone2 {
+            /* position: absolute; */
+            /* bottom: 20px; */
+            /* Adjust the value as needed */
+            /* left: 20%; */
+            /* transform: translateX(-50%); */
+            border-radius: 20px;
+            border: none;
+            background-color: green;
+            color: white;
+            font-size: 34px;
+            width: 80px;
+            height: 40px;
+        }
+
+        .message {
+            position: absolute;
+            bottom: 20px;
+            /* Adjust the value as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 10px;
+            background-color: white;
+            color: blue;
+            font-size: 34px;
+            width: 50px;
+            height: 50px;
+        }
+
+        .whatsapp {
+            width: 50px;
+            height: 50px;
+            font-size: 34px;
+            background-color: greenyellow;
+            color: white;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+
+        .brush {
+            width: 50px;
+            height: 50px;
+            font-size: 34px;
+            background-color: orangered;
+            color: bisque;
+            border-radius: 10px;
+            margin-top: 50px;
+            margin-right: 0;
+        }
+
+        .search {
+            width: 20%;
+            height: 40px;
+            border-radius: 15px;
+            background-color: white;
+        }
+
+        span {
+            margin-right: 20px;
+        }
+
+        .container2 {
+            width: 300px;
+            height: 550px;
+            position: relative;
+            background-color: white;
+            background-size: 385px;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            margin: 40px auto;
+            padding: 20px 10px;
+            text-align: center;
+            border: 1px black solid;
+        }
+
+        #content3 {
+            position: absolute;
+            bottom: 0px;
+            left: 160px;
+            transform: translateX(-50%);
+            border-radius: 20px;
+            background-color: black;
+            color: white;
+            font-size: 34px;
+            width: 100%;
+            height: 70%;
+            /* display: inline; */
+        }
+
+        .dail {
+            width: 60px;
+            height: 35px;
+            border: none;
+            background-color: black;
+            color: white;
+            font-size: 30px;
+            margin-bottom: 18px;
+            margin-left: 10px;
+            /* display: inline; */
+        }
+
+        #display {
+            width: 100%;
+            height: 40px;
+            border-radius: 20px;
+            background-color: black;
+            color: white;
+            font-size: 30px;
+            overflow: hidden;
+            margin-top: 3px;
+            margin-bottom: 3px;
+        }
+
+        .container3 {
+            width: 300px;
+            height: 550px;
+            position: relative;
+            background-color: black;
+            color: white;
+            background-size: 385px;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            margin: 40px auto;
+            padding: 20px 10px;
+            text-align: center;
+            border: 1px black solid;
+        }
+
+        #content4 {
+            margin-top: 40%;
+            color: white;
+        }
+
+        .abort {
+            font-size: 34px;
+            width: 100px;
+            height: 40px;
+            margin-top: 250px;
+            background-color: red;
+            color: white;
+            border-radius: 20px;
+        }
+
+        .container4 {
+            width: 300px;
+            height: 550px;
+            position: relative;
+            background-color: black;
+            color: white;
+            background-size: 385px;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            margin: 40px auto;
+            padding: 20px 10px;
+            text-align: center;
+            border: 1px black solid;
+        }
+
+        #content5 {
+            background-color: white;
+            height: 50px;
+            color: black;
+            margin-top: 70%;
+        }
+
+        .airtime{
+            width: 50px;
+            height: 50px;
+            border-radius: 20px;
+            margin-top: 50px;
+            margin-right: 0;
+        }
+        .container5{
+            width: 300px;
+            height: 550px;
+            position: relative;
+            background-color: blueviolet;
+            color: white;
+            background-size: 385px;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            margin: 40px auto;
+            padding: 20px 10px;
+            text-align: center;
+            border: 1px black solid;
+        }
+        #content6{
+            margin-top: 60px;
+        }
+        .back{
+            position: absolute;
+            bottom: 20px;
+            /* Adjust the value as needed */
+            left: 80%;
+            transform: translateX(-50%);
+            font-size: 30px;
+            width: 40px;
+            border-radius: 20px;
+            background-color: aliceblue;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <main id="content1">
+        <div class="top-notch"><i class="fa fa-circle" style="margin-top: 5px; margin-left: 12px;"
+                onclick="openCamera()"></i></div>
+        <h1 id="watch"></h1>
+        <button onclick="othercontent()" class="open"><i class="fa fa-angle-double-up"></i></button>
+        <button style="font-size: 24px;" class="camera" onclick="openCamera()"><i class="fa fa-camera"></i></button>
+    </main>
+    <div id="container" class="container">
+        <div class="top-notch"><i class="fa fa-circle" style="margin-top: 5px;" onclick="openCamera()"></i></div>
+        <main id="content2">
+            <span><button class="setting"><i class="fa fa-gear"></i></button>
+                <h4>settings</h4>
+            </span>
+            <span><button class="calender"><i class="fa fa-calendar"></i></button>
+                <h4>calendar</h4>
+            </span>
+            <span><button class="whatsapp"><i class="fa fa-whatsapp"></i></button>
+                <h4>whatsapp</h4>
+            </span>
+            <span><button class="brush"><i class="fa fa-paint-brush"></i></button>
+                <h4>Hi Theme</h4>
+            </span>
+            <div><img src="./airtime-generator.logo.jpg" alt="" class="airtime" onclick="Airtime()">Airtime-Generator</div>
+            <span><button class="phone" onclick="openPhone()"><i class="fa fa-phone"></i></button></span>
+            <span><button class="message"><i class="fa fa-comments"></i></button></span>
+            <span><button class="camera2" onclick="openCamera()"><i class="fa fa-camera"></i></button></span>
+        </main>
+
+    </div>
+
+
+    <div id="container2" class="container2">
+        <div class="top-notch" style="box-shadow: white 4px;"><i class="fa fa-circle" style="margin-top: 5px;"
+                onclick="openCamera()"></i></div>
+        <main id="content3">
+            <div id="display"></div>
+            <button class="dail" onclick="number1('1')">1</button>
+            <button class="dail" onclick="number1('2')">2</button>
+            <button class="dail" onclick="number1('3')">3</button><br>
+            <button class="dail" onclick="number1('4')">4</button>
+            <button class="dail" onclick="number1('5')">5</button>
+            <button class="dail" onclick="number1('6')">6</button><br>
+            <button class="dail" onclick="number1('7')">7</button>
+            <button class="dail" onclick="number1('8')">8</button>
+            <button class="dail" onclick="number1('9')">9</button><br>
+            <button class="dail" onclick="number1('*')">*</button>
+            <button class="dail" onclick="number1('0')">0</button>
+            <button class="dail" onclick="number1('#')">#</button><br>
+            <button class="phone2" onclick="change()"><i class="fa fa-phone"></i></button>
+            <button class="dail" onclick="deleteCharacter()">&#9003;</button>
+
+        </main>
+        <div id="container3" class="container3">
+            <div class="top-notch" style="box-shadow: white 4px;"><i class="fa fa-circle" style="margin-top: 5px;"
+                    ></i></div>
+            <main id="content4">
+    
+            </main>
+        </div>
+    </div>
+    <div id="container5" class="container5">
+        <div class="top-notch" style="box-shadow: white 4px;"><i class="fa fa-circle" style="margin-top: 5px;"
+                ></i></div>
+        <main id="content6">
+            <h4>Generate Airtime</h4>
+            <p>select servive provider:</p>
+        <select name="" id="service">
+            <option disabled value="">Select your service provider</option>
+            <option value="MTN">MTN</option>
+            <option value="GLO">GLO</option>
+            <option value="AIRTEL">AIRTEL</option>
+            <option value="9MOBILE">9MOBILE</option>
+        </select>
+        <p>select amount:</p>
+        <select name="" id="amount">
+            <option disabled value="">Select an amount</option>
+            <option value="100">100</option>
+            <option value="200">200</option>
+            <option value="500">500</option>
+            <option value="1000">1000</option>
+        </select>
+        <h1 id="airtime_screen"></h1>
+        <button onclick="genAirtime()">Generate Airtime</button>
+    </main>
+
+    <!-- <main>
+        <input id="load_airtime" type="text">
+        <button onclick="loadAirtime()">Load Airtime</button>
+    </main> -->
+    <p id="history"></p>
+    <button class="back" onclick="backward()"><i class="fa fa-backward"></i></button>
+        </main>
+    </div>
+    </div>
+
+    <div id="container4" class="container4">
+        <div class="top-notch" style="box-shadow: white 4px;"><i class="fa fa-circle" style="margin-top: 5px;"
+                ></i></div>
+        <main id="content5">
+            <span><i class="fa fa-rotate-right" style="font-size: 24px; margin-right: 15px; margin-top: 10px;"></i>Recharging</span>
+        </main>
+    </div>
+    </div>
+</body>
+
+</html>
+<script>
+    let result = document.getElementById("display")
+    let firstValue = ""
+    let userInp = ""
+    function number1(x) {
+        document.getElementById("display").innerHTML += x;
+        firstValue += x
+        userInp += x
+        
+    }
+    function obuttonerator(x) {
+        document.getElementById("display").innerHTML += x;
+        firstValue += x
+    }
+    function deleteCharacter() {
+        var display = document.getElementById("display");
+        display.innerHTML = display.innerHTML.slice(0, -1);
+    }
+
+    function callDateTime() {
+        var currentDate = (new Date()).toDateString();
+        var currentTime = (new Date()).toLocaleTimeString();
+        document.getElementById("watch").innerHTML = `${currentDate}<br/>${currentTime}`;
+
+    }
+    setInterval(function () { callDateTime() }, 1000);
+    //don manipulation
+    //math.random
+    let history = document.getElementById("history")
+    let container = document.getElementById("container")
+    let content1 = document.getElementById("content1");
+    let content2 = document.getElementById("content2");
+    let container2 = document.getElementById("container2");
+    let content3 = document.getElementById("content3")
+    var dailling = document.getElementById("container3")
+    let content4 = document.getElementById("content4")
+    let recharge = document.getElementById("container4")
+    let content5 = document.getElementById("content5")
+    let airtime = document.getElementById("container5");
+    let content6 = document.getElementById("content6");
+    dailling.style.display = "none"
+    container2.style.display = "none"
+    content3.style.display = "none"
+    content2.style.display = "none"
+    container.style.display = "none"
+    content4.style.display = "none"
+    recharge.style.display = "none"
+    content5.style.display = "none"
+    airtime.style.display = "none"
+    content6.style.display = "none"
+
+    function backward() {
+        airtime.style.display = "none"
+        content6.style.display = "none"
+        container.style.display = "block"
+        content2.style.display = "block"
+    }
+
+
+    let airtimeStore = [];
+        let airtimeCode;
+
+        function genAirtime() {
+            airtimeCode = Math.floor(Math.random() * 10000000000000000);
+
+            let airtimeInfo = {
+                network: service.value,
+                amount: amount.value,
+                pin: airtimeCode,
+                used: false
+            };
+
+            airtimeStore.push(airtimeInfo);
+            console.log(airtimeStore);
+            document.getElementById("airtime_screen").innerHTML = airtimeCode;
+            history.innerHTML += `<p>Network: ${airtimeInfo.network}<br>
+            Pin: ${airtimeInfo.pin}<br>
+            Amount: ${airtimeInfo.amount}<br>
+        <p>`
+        }
+        function loadAirtime() {
+            const enteredPin = userInp;
+
+            if (enteredPin.startsWith("*555*") && enteredPin.endsWith("#")) {
+                const matchedProvider = airtimeStore.find(element => {
+                    return element.network === "MTN" && enteredPin.includes(element.pin);
+                });
+
+                if (matchedProvider) {
+                    alert(`You have successfully recharged ${matchedProvider.network} of ${matchedProvider.amount}`);
+                    return;
+                }
+            } else if (enteredPin.startsWith("*311*") && enteredPin.endsWith("#")) {
+                const matchedProvider = airtimeStore.find(element => {
+                    return element.network === "AIRTEL" && enteredPin.includes(element.pin);
+                });
+
+                if (matchedProvider) {
+                    alert(`You have successfully recharged ${matchedProvider.network} of ${matchedProvider.amount}`);
+                    return;
+                }
+            } else if (enteredPin.startsWith("*805*") && enteredPin.endsWith("#")) {
+                const matchedProvider = airtimeStore.find(element => {
+                    return element.network === "GLO" && enteredPin.includes(element.pin);
+                });
+
+                if (matchedProvider) {
+                    alert(`You have successfully recharged ${matchedProvider.network} of ${matchedProvider.amount}`);
+                    return;
+                }
+            } else if (enteredPin.startsWith("*222*") && enteredPin.endsWith("#")) {
+                const matchedProvider = airtimeStore.find(element => {
+                    return element.network === "9MOBILE" && enteredPin.includes(element.pin);
+                });
+
+                if (matchedProvider) {
+                    alert(`You have successfully recharged ${matchedProvider.network} of ${matchedProvider.amount}`);
+                    return;
+                }
+            }
+
+            alert("Invalid service provider or PIN");
+        }
+
+
+    function Airtime() {
+        airtime.style.display = "block"
+        content6.style.display = "block"
+        container.style.display = "none"
+        content2.style.display = "none"
+    }
+    function othercontent() {
+        content2.style.display = "block";
+        container.style.display = "block";
+        content1.style.display = "none";
+    }
+
+    function openPhone() {
+        content2.style.display = "none";
+        container.style.display = "none";
+        content1.style.display = "none";
+        container2.style.display = "block"
+        content3.style.display = "block"
+    }
+
+    function openCamera() {
+        content1.style.display = "none";
+        container.style.display = "none";
+        container2.style.display = "none";
+        
+        
+
+
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (stream) {
+                var video = document.createElement('video');
+                video.srcObject = stream;
+                video.autoplay = true;
+                video.style.width = "60%";
+                video.style.textAlign = "center"
+                video.style.marginLeft = "30%"
+                video.style.marginRight = "30%"
+                video.style.height = "800px";
+                document.body.appendChild(video);
+            })
+
+    }
+    function change() {
+        
+        if (userInp.startsWith("*")) {
+            userInp = ""
+            alert("RECHARGE CARD")
+            console.log(userInp)
+            container2.style.display = "none"
+            let phone = 0;
+           let hameed =
+                setInterval(() => {
+                    phone++
+                    recharge.style.display = "block"
+                    content5.style.display = "block"
+                    console.log(hameed)
+                    if (phone == 8) {
+                        clearInterval(hameed);
+                        loadAirtime()
+                        alert("you have successfully recharged")
+                        container2.style.display = "block"
+                        recharge.style.display = "none"
+                    }
+                }, 1000);
+
+
+        }
+        else {
+            container2.style.display = "none"
+            calling()
+            console.log(userInp)
+
+        }
+    }
+    function abort() {
+        clearInterval(dan);
+        container2.style.display = "block"
+        dailling.style.display = "none"
+    }
+    let dan;
+    
+    function calling() {
+        var number = document.getElementById("display")
+        textcontent = number.innerHTML
+        userInp = ""
+        content4.innerHTML = ""
+        content4.innerHTML += `calling ${textcontent} <br/>
+     <button class="abort" onClick="abort()"><i class="fa fa-phone"></i></button>`
+        let erra = 0;
+        dan =
+            setInterval(() => {
+                erra++
+                dailling.style.display = "block"
+                content4.style.display = "block"
+                console.log(erra)
+                if (erra == 10) {
+                    clearInterval(dan);
+                    alert("didn't respond")
+                    container2.style.display = "block"
+                    dailling.style.display = "none"
+                }
+            }, 1000);
+
+    }
+    // function change(){
+    //     document.body.style.backgroundColor == "blue"?
+    //     body.style.backgroundColor = "white":
+    //     document.body.style.backgroundColor = "blue"
+    // }
+
+
+ // function change(){
+    //     document.body.style.backgroundColor == "blue"?
+    //     body.style.backgroundColor = "white":
+    //     document.body.style.backgroundColor = "blue"
+    // }
+</script>
